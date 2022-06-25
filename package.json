@@ -5,8 +5,9 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "node dist/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pre-commit": "lint-staged"
+    "test": "./node_modules/.bin/eslint src/index.js",
+    "prepare": "husky install"
+
   },
   "keywords": [],
   "author": "",
@@ -21,7 +22,7 @@
   }, "lint-staged":{
     "**/*.{js,jsx,ts,tsx}":[
       "npx prettier --write",
-      "npx eslint --fix",
+      "npx eslint --fix"
     ]
   }
 }
