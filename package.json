@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node dist/app.js",
     "test": "./node_modules/.bin/eslint src/index.js",
-    "prepare": "husky install"
-
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -18,10 +18,11 @@
     "eslint": "^8.18.0",
     "eslint-plugin-react": "^7.30.0",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.2"
-  }, "lint-staged":{
-    "**/*.{js,jsx,ts,tsx}":[
-      "npx prettier --write",
+    "lint-staged": "^13.0.2",
+    "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
       "npx eslint --fix"
     ]
   }
